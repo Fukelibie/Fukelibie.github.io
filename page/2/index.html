@@ -42,6 +42,62 @@
 
 
 
+    
+        <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        
+            load: ['[tex]/mhchem'],
+        
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        
+            packages: {'[+]': ['mhchem']},
+        
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
           
 
 
@@ -215,61 +271,115 @@
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
     
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/2016/01/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91%E5%BD%92%E7%A8%8B/">【反逆LC】归程</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2016-01-05
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2020-07-18
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E5%8F%9B%E9%80%86%E7%9A%84%E9%B2%81%E9%B2%81%E4%BF%AE/">叛逆的鲁鲁修</a>
+    </span>
+    
+  </div>
+</div>   
+    
 
-<div class="mdui-card mdui-p-a-4 mdui-m-b-5">
-    <div class="page-describe">
-        目前共计 12 篇日志。
+
+
+      
+      
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E9%B2%81C/ >鲁C</a>
+      </i>
+    
+  </div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>C.C.放下手中的《哈姆雷特》，闭上了眼睛。长时间的阅读令她眼球酸涩。她不得不闭了好一会才缓过来。</p>
+<p>她自知火车厢并不是细品名著的好场所，她也不是求学问教的学生。能支持着她在头晕眼花随时就来的火车厢内持续阅读的，仅仅是《哈姆雷特》这个故事罢了。</p>
+<p>这是一个关于国王，皇子，和复仇的故事。</p>
+<p>尽管之前她就读过几遍，内容早就印在脑海，可她还是固执地又翻了一次，似乎在借此为她的旅行画上一个句点。<br>奇怪，她想，我明明不是这么矫情的人。</p>
+<p>C.C.于两个星期前独自踏上了火车，为了祭奠什么东西而前往某个令人怀念的地方。不辞而别，没有向任何人，...
+          
+          </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2016/01/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91%E5%BD%92%E7%A8%8B/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/2015/08/15/%E9%BB%91%E5%8E%86%E5%8F%B2/">黑历史</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2015-08-15
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2020-07-18
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/LC-LCday/ >LC+LCday</a>
+      </i>
+    
+  </div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            几年前的历史了。。。自觉难看所以并不推荐观看
+          
+          </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2015/08/15/%E9%BB%91%E5%8E%86%E5%8F%B2/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+
+
+  <nav style="text-align: center;">
+    <div class="pagination">
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </div>
-    <div class="posts-collapse">
-        
-            
-            
-                <div class="collection-title">
-                    <a href="/archives/2019"><h2>2019<small>归档</small></h2></a>
-                </div>
-                
-            
-
-            <div class="collection-item">
-                <h3><a href="/2019/03/08/%E3%80%90%E6%97%A0CP%E3%80%91%E6%9E%A2%E6%9C%A8%E6%9C%B1%E9%9B%80%E6%97%A0%E8%AF%9D%E5%8F%AF%E8%AF%B4/">【无CP】枢木朱雀无话可说</a></h3>
-                <time itemprop="dateCreated" datetime=2019-03-08 >
-                    2019.03.08
-                </time>
-            </div>
-        
-            
-            
-
-            <div class="collection-item">
-                <h3><a href="/2019/03/08/%E3%80%90%E6%97%A0CP%E3%80%91%E7%8B%AE%E5%BF%83%E7%88%B6%E5%AD%90/">【无CP】狮心父子</a></h3>
-                <time itemprop="dateCreated" datetime=2019-03-08 >
-                    2019.03.08
-                </time>
-            </div>
-        
-            
-            
-
-            <div class="collection-item">
-                <h3><a href="/2019/03/08/%E3%80%90%E6%97%A0CP%E3%80%91%E5%94%AF%E6%9C%89%E9%BB%91%E5%A4%9C%E5%90%AC%E8%A7%81%E5%A5%B3%E7%9A%87%E4%BD%8E%E8%AF%AD/">【无CP】唯有黑夜听见女皇低语</a></h3>
-                <time itemprop="dateCreated" datetime=2019-03-08 >
-                    2019.03.08
-                </time>
-            </div>
-        
-            
-            
-
-            <div class="collection-item">
-                <h3><a href="/2019/03/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91Young%20And%20Beautiful/">【反逆LC】Young And Beautiful</a></h3>
-                <time itemprop="dateCreated" datetime=2019-03-05 >
-                    2019.03.05
-                </time>
-            </div>
-        
-    </div>
-</div>
-
+  </nav>
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
