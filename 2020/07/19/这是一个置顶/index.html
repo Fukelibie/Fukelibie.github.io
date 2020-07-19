@@ -42,70 +42,14 @@
 
 
 
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
 
     
     
     <title>
-          
-            Fukelibie
+        
+            这是一个置顶 | Fukelibie
         
     </title>
     
@@ -270,11 +214,11 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
     
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
+    
+      <div class="post-header"> 
   <a class="post-header-title" href="/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/">这是一个置顶</a>
   <div class="post-header-meta">
     <span>
@@ -290,185 +234,93 @@
       分类于:&nbsp;<a class="category-link" href="/categories/%E6%88%91%E7%9B%B8%E5%85%B3/">我相关</a>
     </span>
     
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
   </div>
 </div>   
     
 
 
 
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <center>一般路过同人女的存档地</center>
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=这是一个置顶&url=http://fukelibie.github.io/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/&pic=http://Fukelibie.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=这是一个置顶&url=http://fukelibie.github.io/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/&via=夫科里别" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://fukelibie.github.io/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://fukelibie.github.io/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://fukelibie.github.io/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/&title=这是一个置顶" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Fukelibie&title=这是一个置顶&summary=一般路过同人女，什么都堆&pics=http://Fukelibie.github.io/null&url=http://fukelibie.github.io/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://fukelibie.github.io/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/&text=这是一个置顶" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <center>一般路过同人女的存档地</center>
 <center>想いがぼんやりしたって、次第に色褪せちゃって，ずっとずっときみを描くよ</center>
 <center>主坑反逆，具体在侧边目录“关于”里,以后有什么再补</center>
 <center>可能也会写一些别的圈的东西，什么向的都吃，什么向的都可能有</center>
 <center>所以可根据类别检索作品，根据标签检索cp</center>
 <center>祝福天下有情人终成眷属</center>
-          
-          </div>
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2019/03/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91Young%20And%20Beautiful/">
+        <span>【反逆LC】Young And Beautiful</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/" id="toc-header" class="mdui-ripple">文章目录</a>
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/07/19/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%BD%AE%E9%A1%B6/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2019/03/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91Young%20And%20Beautiful/">【反逆LC】Young And Beautiful</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2019-03-05
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-07-18
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E5%8F%9B%E9%80%86%E7%9A%84%E9%B2%81%E9%B2%81%E4%BF%AE/">叛逆的鲁鲁修</a>
-    </span>
-    
+      </li>
+    </ul>
   </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E9%B2%81C/ >鲁C</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>※讲个唯一的笑话，这是2018.12.5Lelouch生贺的C.C.篇<br>※TV原作死透向，可以看一下我的置顶了解一下我关于原作向的定义。<br>※向我心中最好的LC《一瞬百年》致敬，我无法写出此文万分之一好。求求大家都来看看这篇←不过我估计大概都看过了吧（<br>※是BE而且……不是什么开心故事。比较枯燥，有大段的心理描写以及掺杂了我对LC两个角色的大量个人理解。我只是在写我的哈姆雷特，所以当接受不了的时候，就关闭界面吧。<br>※有原创（？）角色<br>※推荐bgm是打雷姐的Young And Beautiful，可以看看歌词再听听歌（推荐网易的翻译），我的灵感和大纲（？）...
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2019/03/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91Young%20And%20Beautiful/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2016/01/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91%E5%BD%92%E7%A8%8B/">【反逆LC】归程</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2016-01-05
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-07-18
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E5%8F%9B%E9%80%86%E7%9A%84%E9%B2%81%E9%B2%81%E4%BF%AE/">叛逆的鲁鲁修</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E9%B2%81C/ >鲁C</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>C.C.放下手中的《哈姆雷特》，闭上了眼睛。长时间的阅读令她眼球酸涩。她不得不闭了好一会才缓过来。</p>
-<p>她自知火车厢并不是细品名著的好场所，她也不是求学问教的学生。能支持着她在头晕眼花随时就来的火车厢内持续阅读的，仅仅是《哈姆雷特》这个故事罢了。</p>
-<p>这是一个关于国王，皇子，和复仇的故事。</p>
-<p>尽管之前她就读过几遍，内容早就印在脑海，可她还是固执地又翻了一次，似乎在借此为她的旅行画上一个句点。<br>奇怪，她想，我明明不是这么矫情的人。</p>
-<p>C.C.于两个星期前独自踏上了火车，为了祭奠什么东西而前往某个令人怀念的地方。不辞而别，没有向任何人，...
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2016/01/05/%E3%80%90%E5%8F%8D%E9%80%86LC%E3%80%91%E5%BD%92%E7%A8%8B/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2015/08/15/%E9%BB%91%E5%8E%86%E5%8F%B2/">黑历史</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2015-08-15
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-07-18
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/LC-LCday/ >LC+LCday</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            几年前的历史了。。。自觉难看所以并不推荐观看
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2015/08/15/%E9%BB%91%E5%8E%86%E5%8F%B2/">阅读更多</a>
-        </div>
-      </div>
-    </article>
 
 
 
@@ -518,6 +370,12 @@
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
 
 
 
